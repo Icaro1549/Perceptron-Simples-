@@ -20,27 +20,19 @@ Exemplos de perceptron:
 Um exemplo extremamente comum de perceptron que usados no dia a dia é um sensor simples de ar condicionado/aquecedor. Ele recebe os sinais do ambiente como temperatura do ambiente, compara se tá muito quente ou frio e dá um resultado podendo ser o acionamento do ar condicionado pra resfriar ou do aquecedor pra aquecer
 
 
-    Código de um perceptron simples 
-
 
     def main():
-
-    print("Olá usuário!")
-    print("O resultado do input é: ", perceptron_input([1,2,3], [0.1,0.2,0.3], 0.4))
-    print("O resultado do perceptron é: ", perceptron_output([1,2,3], [0.1,0.2,0.3], 0.4))
+     print("Olá usuário!")
+     print("O resultado do input é: ", perceptron_input([1,2,3], [0.1,0.2,0.3], 0.4))
+     print("O resultado do perceptron é: ", perceptron_output([1,2,3], [0.1,0.2,0.3], 0.4))
 
     def perceptron_input(inputs, weights, bias): 
-
-    weighted_sum = sum(i*w for i,w in zip(inputs,weights)) 
-
-    return weighted_sum + bias 
+       weighted_sum = sum(i*w for i,w in zip(inputs,weights))
+       return weighted_sum + bias
 
     def perceptron_output(inputs, weights, bias):
-
-    return 1 if perceptron_input(inputs, weights, bias)>= 0 else 0
+       return 1 if perceptron_input(inputs, weights, bias)>= 0 else 0
 
 
     if __name__ == "__main__":
-
-    main()
-    
+       main()
